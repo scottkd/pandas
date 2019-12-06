@@ -41,7 +41,7 @@ except ImportError:
     _CYTHON_INSTALLED = False
 
 
-req_numpy_ver = '1.13.3'
+req_numpy_ver = '1.14.5'
 setuptools_kwargs = {
     'install_requires': [
         'python-dateutil >= 2.5.0',
