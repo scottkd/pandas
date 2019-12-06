@@ -41,14 +41,14 @@ except ImportError:
     _CYTHON_INSTALLED = False
 
 
-min_numpy_ver = '1.9.0'
+req_numpy_ver = '1.13.3'
 setuptools_kwargs = {
     'install_requires': [
         'python-dateutil >= 2.5.0',
         'pytz >= 2011k',
-        'numpy >= {numpy_ver}'.format(numpy_ver=min_numpy_ver),
+        'numpy == {numpy_ver}'.format(numpy_ver=req_numpy_ver),
     ],
-    'setup_requires': ['numpy >= {numpy_ver}'.format(numpy_ver=min_numpy_ver)],
+    'setup_requires': ['numpy == {numpy_ver}'.format(numpy_ver=req_numpy_ver)],
     'zip_safe': False,
 }
 
