@@ -31,16 +31,16 @@ def is_platform_mac():
     return sys.platform == "darwin"
 
 
-min_numpy_ver = "1.13.3"
+required_numpy_ver = "1.13.3"
 min_cython_ver = "0.29.13"  # note: sync with pyproject.toml
 
 setuptools_kwargs = {
     "install_requires": [
         "python-dateutil >= 2.6.1",
         "pytz >= 2017.2",
-        "numpy >= {numpy_ver}".format(numpy_ver=min_numpy_ver),
+        "numpy == {numpy_ver}".format(numpy_ver=required_numpy_ver),
     ],
-    "setup_requires": ["numpy >= {numpy_ver}".format(numpy_ver=min_numpy_ver)],
+    "setup_requires": ["numpy == {numpy_ver}".format(numpy_ver=required_numpy_ver)],
     "zip_safe": False,
 }
 
